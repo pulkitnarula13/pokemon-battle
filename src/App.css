@@ -36,3 +36,94 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+/* CSS for the App */
+
+.app-container {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.battle-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.pokemon-card {
+  text-align: center;
+  flex: 1;
+  margin: 0 10px;
+}
+
+.pokemon-card img {
+  max-width: 150px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.move {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #e0f7fa;
+  border-radius: 5px;
+}
+
+.move-name {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.move-power {
+  color: #00796b;
+  font-weight: bold;
+}
+
+.controls {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.controls button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background-color: #0056b3;
+}
+
+.battle-log {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.battle-log h3 {
+  margin-top: 0;
+}
+
+.battle-log p {
+  margin: 0;
+}

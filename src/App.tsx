@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './App.css'; // Import the CSS file for styling
+
 
 function App() {
   const [pokemon1, setPokemon1] = useState<any>(null);
@@ -89,26 +91,44 @@ function App() {
   };
 
   return (
-    <div>
-      <h1>Pokémon Battle</h1>
-      <button onClick={getRandomPokemon}>Get Random Pokémon</button>
+    <div className="app-container">
+      <header>
+        <h1>Pokémon Battle Simulator</h1>
+      </header>
 
-      {pokemon1 && pokemon2 && (
-        <div>
-          <div>
+      <div className="battle-container">
+        {pokemon1 && (
+          <div className="pokemon-card">
             <h2>{pokemon1.name}</h2>
             <img src={pokemon1.sprite} alt={pokemon1.name} />
-            <p>HP: {pokemon1.hp}</p>
-            <p>Move: {pokemon1.move.name} (Power: {pokemon1.move.power})</p>
+            <div className="move">
+              <span className="move-name">{pokemon1.move.name}</span>
+              <span className="move-power">{pokemon1.move.power}</span>
+            </div>
           </div>
-          <div>
+        )}
+
+        {pokemon2 && (
+          <div className="pokemon-card">
             <h2>{pokemon2.name}</h2>
             <img src={pokemon2.sprite} alt={pokemon2.name} />
-            <p>HP: {pokemon2.hp}</p>
-            <p>Move: {pokemon2.move.name} (Power: {pokemon2.move.power})</p>
+            <div className="move">
+              <span className="move-name">{pokemon2.move.name}</span>
+              <span className="move-power">{pokemon2.move.power}</span>
+            </div>
           </div>
-          <button onClick={startBattle}>Start Battle</button>
-          {battleLog && <p>{battleLog}</p>}
+        )}
+      </div>
+
+      <div className="controls">
+        <button onClick={getRandomPokemon}>Get Random Pokémon</button>
+        <button onClick={startBattle}>Start Battle!</button>
+      </div>
+
+      {battleLog && (
+        <div className="battle-log">
+          <h3>Battle Log</h3>
+          <p>{battleLog}</p>
         </div>
       )}
     </div>
