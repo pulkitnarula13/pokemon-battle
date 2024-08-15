@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './App.css'; // Import the CSS file for styling
-
-
+import './App.css';
 function App() {
   const [pokemon1, setPokemon1] = useState<any>(null);
   const [pokemon2, setPokemon2] = useState<any>(null);
